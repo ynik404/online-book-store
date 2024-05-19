@@ -5,6 +5,7 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
+import mate.academy.exception.DataProcessingException;
 import mate.academy.exception.EntityNotFoundException;
 import mate.academy.model.Book;
 import mate.academy.repository.BookRepository;
@@ -28,7 +29,7 @@ public class BookRepositoryImpl implements BookRepository {
             if (transaction != null && transaction.isActive()) {
                 transaction.rollback();
             }
-            throw new RuntimeException("Cannot add book: " + book, e);
+            throw new DataProcessingException("Cannot add book: " + book, e);
         }
     }
 
@@ -36,6 +37,8 @@ public class BookRepositoryImpl implements BookRepository {
     public Book getBookById(Long id) {
         try (EntityManager entityManager = entityManagerFactory.createEntityManager()) {
             return entityManager.find(Book.class, id);
+        } catch (Exception e) {
+            throw new EntityNotFoundException("Cannot find book with id: " + id, e);
         }
     }
 
