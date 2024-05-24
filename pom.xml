@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.0</version>
+        <version>3.3.0</version>
     </parent>
     <groupId>mate-academy</groupId>
     <artifactId>hibernate-relations-hw</artifactId>
@@ -71,7 +71,7 @@
         <dependency>
             <groupId>org.hibernate.orm</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>6.2.6.Final</version>
+            <version>6.4.4.Final</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
