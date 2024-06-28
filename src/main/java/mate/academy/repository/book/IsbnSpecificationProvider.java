@@ -18,5 +18,3 @@ public class IsbnSpecificationProvider implements SpecificationProvider<Book> {
                 .toArray()));
     }
 }
-
-
