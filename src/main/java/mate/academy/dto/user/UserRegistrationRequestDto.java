@@ -3,7 +3,7 @@ package mate.academy.dto.user;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
-import mate.academy.security.FieldMatch;
+import mate.academy.validation.FieldMatch;
 import org.hibernate.validator.constraints.Length;
 
 @Data

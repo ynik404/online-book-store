@@ -25,6 +25,5 @@ public class User {
     private String firstName;
     @Column(nullable = false)
     private String lastName;
-    @Column
     private String shippingAddress;
 }

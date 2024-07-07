@@ -1,4 +1,4 @@
-package mate.academy.security;
+package mate.academy.validation;
 
 import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
 import static java.lang.annotation.ElementType.TYPE;
