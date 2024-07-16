@@ -13,7 +13,7 @@ import org.hibernate.validator.constraints.Length;
 public class UserRegistrationRequestDto {
     @NotBlank
     @Email
-    private String email;
+    private String username;
     @NotBlank
     private String firstName;
     @NotBlank

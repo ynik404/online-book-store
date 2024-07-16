@@ -56,4 +56,11 @@ public class BookServiceImpl implements BookService {
                 .map(bookMapper::toDto)
                 .toList();
     }
+
+    @Override
+    public void changeBookDescription(Long id, String description) {
+        Book oldBook = bookRepository.getReferenceById(id);
+        oldBook.setDescription(description);
+        bookRepository.updateDescription(id, description);
+    }
 }
