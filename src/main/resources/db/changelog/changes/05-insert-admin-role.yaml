@@ -24,7 +24,7 @@ databaseChangeLog:
             tableName: users
             columns:
               - column:
-                  name: username
+                  name: email
                   value: admin@gmail.com
               - column:
                   name: password
@@ -48,7 +48,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: user_id
-                  valueComputed: (SELECT id FROM users WHERE username = 'admin@gmail.com')
+                  valueComputed: (SELECT id FROM users WHERE email = 'admin@gmail.com')
               - column:
                   name: role_id
                   valueComputed: (SELECT id FROM roles WHERE name = 'ADMIN')

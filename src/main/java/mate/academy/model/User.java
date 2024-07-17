@@ -32,7 +32,7 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(nullable = false, unique = true)
-    private String username;
+    private String email;
     @Column(nullable = false)
     private String password;
     @Column(nullable = false)
@@ -56,9 +56,8 @@ public class User implements UserDetails {
         return roles;
     }
 
-    @Override
     public String getUsername() {
-        return username;
+        return email;
     }
 
     @Override

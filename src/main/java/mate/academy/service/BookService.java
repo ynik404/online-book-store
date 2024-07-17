@@ -17,5 +17,5 @@ public interface BookService {
 
     List<BookDto> search(BookSearchParameters params, Pageable pageable);
 
-    void changeBookDescription(Long id, String description);
+    void updateBookById(Long id, CreateBookRequestDto requestDto);
 }

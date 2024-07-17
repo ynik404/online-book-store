@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Tag(name = "Book management", description = "Endpoints for managing books")
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/api/books")
+@RequestMapping("/books")
 public class BookController {
     private final BookService bookService;
 
@@ -56,8 +56,8 @@ public class BookController {
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PutMapping("/{id}")
     @Operation(summary = "Change book's description", description = "Change book's description")
-    public void changeBookDescription(@PathVariable Long id, String description) {
-        bookService.changeBookDescription(id, description);
+    public void updateBookById(@PathVariable Long id, CreateBookRequestDto requestDto) {
+        bookService.updateBookById(id, requestDto);
     }
 
     @PreAuthorize("hasRole('ROLE_ADMIN')")
