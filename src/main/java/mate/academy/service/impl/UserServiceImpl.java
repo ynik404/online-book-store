@@ -35,9 +35,8 @@ public class UserServiceImpl implements UserService {
         user.setPassword(passwordEncoder.encode(requestDto.getPassword()));
         user.setRoles(Set.of(
                 findRoleByName(Role.RoleName.USER)));
-        User savedUser = userRepository.save(user);
-
-        return userMapper.toUserResponse(savedUser);
+        userRepository.save(user);
+        return userMapper.toUserResponse(user);
     }
 
     private Role findRoleByName(Role.RoleName roleName) {
