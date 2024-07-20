@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthenticationController {
     private final UserService userService;
 
-    @PostMapping("/registration")
-    public UserResponseDto register(@Valid @RequestBody UserRegistrationRequestDto requestDto)
+    @PostMapping("/register")
+    public UserResponseDto register(@RequestBody @Valid UserRegistrationRequestDto requestDto)
             throws RegistrationException {
         return userService.register(requestDto);
     }
