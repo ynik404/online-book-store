@@ -6,6 +6,7 @@ import jakarta.validation.Valid;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import mate.academy.dto.book.BookDto;
+import mate.academy.dto.book.BookRequestDto;
 import mate.academy.dto.book.BookSearchParameters;
 import mate.academy.service.BookService;
 import org.springdoc.core.annotations.ParameterObject;
@@ -52,8 +53,8 @@ public class BookController {
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(summary = "Create a new book",
             description = "Create a new book")
-    public BookDto createBook(@RequestBody @Valid BookDto bookDto) {
-        return bookService.createBook(bookDto);
+    public BookDto createBook(@RequestBody @Valid BookRequestDto requestDto) {
+        return bookService.createBook(requestDto);
     }
 
     @PreAuthorize("hasRole('ADMIN')")
@@ -61,8 +62,8 @@ public class BookController {
     @Operation(summary = "Change book's description",
             description = "Change book's description")
     public BookDto updateBookById(@PathVariable Long id,
-                                  @RequestBody @Valid BookDto bookDto) {
-        return bookService.updateBookById(id, bookDto);
+                                  @RequestBody @Valid BookRequestDto requestDto) {
+        return bookService.updateBookById(id, requestDto);
     }
 
     @PreAuthorize("hasRole('ADMIN')")

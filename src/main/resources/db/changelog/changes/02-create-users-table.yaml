@@ -38,7 +38,7 @@ databaseChangeLog:
                     unique: true
               - column:
                   name: password
-                  type: varchar(2000)
+                  type: varchar(255)
                   constraints:
                     nullable: false
               - column:
@@ -53,7 +53,7 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: shipping_address
-                  type: varchar(500)
+                  type: varchar(255)
               - column:
                   name: is_deleted
                   type: bit(1)
