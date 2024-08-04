@@ -1,4 +1,4 @@
-package mate.academy.repository;
+package mate.academy.repository.specification;
 
 import mate.academy.dto.book.BookSearchParameters;
 import org.springframework.data.jpa.domain.Specification;

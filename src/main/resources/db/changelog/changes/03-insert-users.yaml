@@ -1,0 +1,42 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-users
+      author: mate academy
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: email
+                  value: user@gmail.com
+              - column:
+                  name: password
+                  value: $2a$12$L0G8QzM.ALIYy1Rl48hsRu3xSo3xgCkYMYFiHQTYrddK5AEQlVNQa #123123123
+              - column:
+                  name: first_name
+                  value: Bob
+              - column:
+                  name: last_name
+                  value: Doe
+              - column:
+                  name: shipping_address
+                  value: 123123 Kyiv
+
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: email
+                  value: admin@gmail.com
+              - column:
+                  name: password
+                  value: $2a$12$L0G8QzM.ALIYy1Rl48hsRu3xSo3xgCkYMYFiHQTYrddK5AEQlVNQa #123123123
+              - column:
+                  name: first_name
+                  value: Admin
+              - column:
+                  name: last_name
+                  value: Test
+              - column:
+                  name: shipping_address
+                  value: shipping_address

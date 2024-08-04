@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-categories
+      author: mate
+      changes:
+        - insert:
+            tableName: categories
+            columns:
+              - column:
+                  name: name
+                  value: "Dystopian"
+              - column:
+                  name: description
+                  value: "Dystopian fiction are subgenres of science fiction
+                     that explore social and political structures."
+
+        - insert:
+            tableName: categories
+            columns:
+              - column:
+                  name: name
+                  value: "Fantasy"
+              - column:
+                  name: description
+                  value: "Fantasy is a genre of fiction involving magical elements,
+                   as well as a work in this genre."
+
+        - insert:
+            tableName: categories
+            columns:
+              - column:
+                  name: name
+                  value: "Horror"
+              - column:
+                  name: description
+                  value: "Horror is a genre of fiction that is intended to disturb,
+                   frighten or scare."
+
+

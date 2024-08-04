@@ -8,8 +8,7 @@ import java.util.Set;
 import lombok.Data;
 
 @Data
-public class BookDto {
-    private Long id;
+public class BookRequestDto {
     @NotBlank
     private String title;
     @NotBlank

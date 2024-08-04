@@ -1,0 +1,73 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-books
+      author: mate academy
+      changes:
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Harry Potter and the Philosopher's Stone"
+              - column:
+                  name: author
+                  value: "J. K. Rowling"
+              - column:
+                  name: isbn
+                  value: "ISBN-001"
+              - column:
+                  name: price
+                  valueNumeric: "29.99"
+              - column:
+                  name: description
+                  value: "Harry Potter and the Philosopher's Stone
+                   is a fantasy novel written by British author"
+              - column:
+                  name: cover_image
+                  value: "philosophers_stone.jpg"
+
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "The Call of Cthulhu"
+              - column:
+                  name: author
+                  value: "H. P. Lovecraft"
+              - column:
+                  name: isbn
+                  value: "ISBN-002"
+              - column:
+                  name: price
+                  valueNumeric: "35.50"
+              - column:
+                  name: description
+                  value: "The Call of Cthulhu is a short story 
+                   by American writer H. P. Lovecraft."
+              - column:
+                  name: cover_image
+                  value: "call_of_cthulhu.jpg"
+
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: title
+                  value: "Fahrenheit 451"
+              - column:
+                  name: author
+                  value: "Ray Bradbury"
+              - column:
+                  name: isbn
+                  value: "ISBN-003"
+              - column:
+                  name: price
+                  valueNumeric: "40.00"
+              - column:
+                  name: description
+                  value: "Fahrenheit 451 presents a future American society
+                   where books have been outlawed and firemen burn any that are found."
+              - column:
+                  name: cover_image
+                  value: "451.jpg"
